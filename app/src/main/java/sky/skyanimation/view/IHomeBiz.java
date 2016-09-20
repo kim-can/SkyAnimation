@@ -1,4 +1,4 @@
-package sky.skyanimation;
+package sky.skyanimation.view;
 
 import jc.sky.core.Impl;
 import jc.sky.core.SKYBiz;

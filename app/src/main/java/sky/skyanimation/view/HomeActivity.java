@@ -1,24 +1,23 @@
-package sky.skyanimation;
+package sky.skyanimation.view;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.ValueAnimator;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jc.sky.SKYHelper;
 import jc.sky.core.Impl;
-import jc.sky.modules.log.L;
+import jc.sky.display.SKYIDisplay;
 import jc.sky.view.SKYActivity;
 import jc.sky.view.SKYBuilder;
+import sky.skyanimation.R;
+import sky.skyanimation.view.gaoji.GaoActivity;
 
 /**
  * @创建人 sky
@@ -67,6 +66,12 @@ public class HomeActivity extends SKYActivity<IHomeBiz> implements IHomeActivity
 		animSet.start();
 	}
 
+	/**
+	 * 跳转高级
+	 */
+	@OnClick(R.id.btn_gj) public void onTo(){
+		display(SKYIDisplay.class).intent(GaoActivity.class);
+	}
 }
 
 @Impl(HomeActivity.class)
